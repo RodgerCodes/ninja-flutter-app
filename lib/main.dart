@@ -54,18 +54,83 @@ class Home extends StatelessWidget {
       ),
     ),
 
-    body: Center(
-      child: IconButton(
-        onPressed: () {
-        print('Hhahaha..you pressed me');
-        },
-        icon: Icon(
-          Icons.alarm,
-          size: 40.0,
+    body:Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+             Container(
+               color: Colors.blue,
+               padding:EdgeInsets.all(40) ,
+               child: IconButton(
+                 onPressed: (){},
+                 icon: Icon(
+                   Icons.airplanemode_active
+                 ),
+               ),
+             ),
+             Container(
+               color: Colors.greenAccent,
+               padding: EdgeInsets.all(40),
+               child: IconButton(
+                 onPressed: (){},
+                 icon: Icon(
+                   Icons.unarchive
+                 ),
+               ),
+             )
+          ],
         ),
-        color: Colors.amber,
-      )
-    ),    
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Container(
+              color: Colors.cyan,
+              padding: EdgeInsets.all(40),
+              child: IconButton(
+                onPressed: (){},
+                icon: Icon(
+                  Icons.mood_bad
+                ),
+                color: Colors.deepOrange,
+              ),
+            ),
+            Container(
+              color: Colors.amber,
+              padding: EdgeInsets.all(40),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.motorcycle),
+              ),
+            )
+          ],
+        ),
+        Row(
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Container(
+              color: Colors.redAccent,
+              padding: EdgeInsets.all(40),
+              child: IconButton(icon: Icon(
+                Icons.my_location
+              ), onPressed: (){}),
+            ),
+            Container(
+              color: Colors.black,
+              padding: EdgeInsets.all(40),
+              child: IconButton(
+                onPressed: (){},
+                icon: Icon(
+                  Icons.network_wifi
+                ),
+              ),
+            )
+          ],
+        )
+      ],
+    ),
+    
     floatingActionButton: FloatingActionButton(
       child:Text('Click', style:TextStyle(
         fontSize:16.0,
